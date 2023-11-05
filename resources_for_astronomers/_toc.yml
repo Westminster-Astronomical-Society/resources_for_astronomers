@@ -1,0 +1,32 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+
+parts:
+  - caption: Catalogs and Databases
+    numbered: False
+    chapters:
+    - file: CDS
+    - file: NED
+    - file: STScI
+    - file: HEASARC
+    - file: Skyview
+
+  - caption: Solar System Information
+    numbered: False
+    chapters:
+    - file: JPL
+    - file: MPC
+
+  - caption: General Astronomy Resources
+    numbered: False
+    chapters:
+    - file: USNO
+    - file: ADS
+
+  - caption: End Matter
+    numbered: False
+    chapters:
+    - file: reference
