@@ -9,6 +9,13 @@ parts:
     numbered: False
     chapters:
     - file: CDS
+      sections:
+      - file: CDS_portal
+      - file: CDS_Aladin
+      - file: CDS_SIMBAD
+      - file: CDS_Vizier
+      - file: CDS_X-match
+      - file: CDS_interop
     - file: NED
     - file: STScI
     - file: HEASARC
