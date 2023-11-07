@@ -16,6 +16,7 @@ parts:
       - file: CDS_Vizier
       - file: CDS_X-match
       - file: CDS_interop
+      - file: astroquery
     - file: NED
     - file: STScI
     - file: HEASARC
