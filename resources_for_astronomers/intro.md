@@ -1,6 +1,6 @@
 # Internet Resources for Astronomers
 
-```{image} ./images/cas_color.png
+```{image} ./_images/cas_color.png
 :alt: Cassiopeia
 :class: dark-light
 :width: 100%
