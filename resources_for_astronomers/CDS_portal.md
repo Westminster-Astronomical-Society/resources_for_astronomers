@@ -3,7 +3,7 @@
 You can start your search for astronomical objects by going to the CDS Portal
 [(http://cdsportal.u-strasbg.fr)](http://cdsportal.u-strasbg.fr). Here you can
 search for an object by name or position. The Sesame name resolver is used for
-search by name. Coordinates can be entered in HMS format (17 57 48 +04 41 36) or
+search by name. Coordinates can be entered in HMS DMS format (17 57 48 +04 41 36) or
 decimal degrees (269.4500 +4.6933).
 
 ```{figure} images/CDS-Portal.png
