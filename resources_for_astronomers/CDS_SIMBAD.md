@@ -144,7 +144,7 @@ SIMBAD TAP Query
 ```{figure} _images/SIMBAD_1.png
 ---
 width: 90%
-name: SIMBAD-TAP
+name: SIMBAD-results
 ---
-SIMBAD TAP Query
+SIMBAD SIMBAD Query
 ```
