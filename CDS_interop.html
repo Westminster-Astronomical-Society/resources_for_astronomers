@@ -409,6 +409,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samp">SAMP</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topcat">TOPCAT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aladin">Aladin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carte-du-ciel">Carte du Ciel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-viewers">Image viewers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online-sky-atlases">Online sky atlases</a></li>
@@ -427,24 +428,83 @@ document.write(`
 <h1>Interoperability and APIs<a class="headerlink" href="#interoperability-and-apis" title="Permalink to this heading">#</a></h1>
 <section id="samp">
 <h2>SAMP<a class="headerlink" href="#samp" title="Permalink to this heading">#</a></h2>
+<p>The Simple Application Messaging Protocol (SAMP) is a communications protocol
+that allows client software to exchange images and data. It was developed by the
+International Virtual Observatory Alliance (IVOA) and is used widely in
+astronomy.</p>
+<p>The CDS website is SAMP enabled and wherever you see the small antenna icon,
+that means you can send that image or table to any SAMP client. You must have a
+SAMP hub running on your computer and one or more SAMP clients.</p>
+<figure class="align-default" id="cds-samp">
+<a class="reference internal image-reference" href="_images/SAMP_1.png"><img alt="_images/SAMP_1.png" src="_images/SAMP_1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">SAMP enabled CDS</span><a class="headerlink" href="#cds-samp" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The software listed below are SAMP enabled. TOPCAT and Aladin are both hubs and
+clients the others are clients only. There is also a standalone SAMP hub that
+comes with <a class="reference external" href="https://docs.astropy.org/en/stable/samp/">Astropy</a> that can be
+started from the commandline with the command <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">samp_hub</span></code>.</p>
 </section>
 <section id="topcat">
 <h2>TOPCAT<a class="headerlink" href="#topcat" title="Permalink to this heading">#</a></h2>
+<p>Tool for OPerations on Catalogues And Tables (TOPCAT) is an interactive
+graphical viewer and editor for tabular data. TOPCAT is a SAMP hub and client
+and can send and receive data from SAMP enabled applications and websites. It
+can also query CDS and many other data repositories directly. It can filter,
+compute statistics and plot information in astronomical data tables.</p>
+<p>For additional information see the <a class="reference external" href="https://www.star.bris.ac.uk/~mbt/topcat/sun253/index.html">TOPCAT help pages</a>.</p>
+<figure class="align-default" id="topcat-table-editor">
+<a class="reference internal image-reference" href="_images/topcat_1.png"><img alt="_images/topcat_1.png" src="_images/topcat_1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">TOPCAT table editor</span><a class="headerlink" href="#topcat-table-editor" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="aladin">
+<h2>Aladin<a class="headerlink" href="#aladin" title="Permalink to this heading">#</a></h2>
+<p>Aladin is well integrated with CDS and is SAMP enabled, obviously.</p>
+<figure class="align-default" id="aladin-sky-atlas">
+<a class="reference internal image-reference" href="_images/aladin_1.png"><img alt="_images/aladin_1.png" src="_images/aladin_1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Aladin Sky Atlas</span><a class="headerlink" href="#aladin-sky-atlas" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="carte-du-ciel">
 <h2>Carte du Ciel<a class="headerlink" href="#carte-du-ciel" title="Permalink to this heading">#</a></h2>
+<p>Cartes du Ciel is a free and opensource skychart program that is very useful in
+planning observations. It is SAMP enabled and can send and receive coordinates,
+images and catalog data from other SAMP enabled applications and websites. You
+can also load VO Tables from CDS as catalogs and search SIMBAD or Vizier by
+object name or coordinates from the object properties menu.</p>
+<p>For additional information see the
+<a class="reference external" href="https://www.ap-i.net/skychart/en/documentation/start">Cartes du Ciel documentation</a>.</p>
+<figure class="align-default" id="cartes-du-ciel">
+<a class="reference internal image-reference" href="_images/Cartes_du_Ciel_1.png"><img alt="_images/Cartes_du_Ciel_1.png" src="_images/Cartes_du_Ciel_1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Carte du Ciel &amp; CDS</span><a class="headerlink" href="#cartes-du-ciel" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="image-viewers">
 <h2>Image viewers<a class="headerlink" href="#image-viewers" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>ds9</p></li>
-<li><p>ginga</p></li>
-</ul>
+<p>SAOImage DS9 is an image display and visualization tool for astronomical data. It
+can display astronomical images in the FITS format. It is a SAMP enabled client
+and can send, receive, and display images and data from other SAMP clients. It
+can also query many astronomical databases directly.</p>
+<figure class="align-default" id="ds9-image-viewer">
+<a class="reference internal image-reference" href="_images/ds9_1.png"><img alt="_images/ds9_1.png" src="_images/ds9_1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">ds9 image viewer</span><a class="headerlink" href="#ds9-image-viewer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="online-sky-atlases">
 <h2>Online sky atlases<a class="headerlink" href="#online-sky-atlases" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>ESA Sky <a class="reference external" href="https://sky.esa.int/esasky/">https://sky.esa.int/esasky/</a></p></li>
+<li><p>Aladin Lite <a class="reference external" href="http://aladin.cds.unistra.fr/AladinLite">http://aladin.cds.unistra.fr/AladinLite</a></p></li>
+<li><p>ESA Sky <a class="reference external" href="https://sky.esa.int/esasky">https://sky.esa.int/esasky</a></p></li>
 <li><p>World Wide Telescope <a class="reference external" href="https://www.worldwidetelescope.org/webclient">https://www.worldwidetelescope.org/webclient</a></p></li>
 </ul>
 </section>
@@ -515,6 +575,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samp">SAMP</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topcat">TOPCAT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aladin">Aladin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carte-du-ciel">Carte du Ciel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-viewers">Image viewers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online-sky-atlases">Online sky atlases</a></li>
