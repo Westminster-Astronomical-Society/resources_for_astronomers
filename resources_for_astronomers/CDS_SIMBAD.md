@@ -34,8 +34,21 @@ SIMBAD Object Database
 
 ## Query by object ID
 
-You can query a single object ID, several objects using wildcards or a list. You can
-also query all objects in a specified radius of your target.
+You can query a single object ID, or several objects in a text file containing one item per line.
+
+Wildcards and ranges can be used in identifiers.
+
+`*` : Any string of characters (including an empty one)
+
+`?` : Any character (exactly one character)
+
+`[abc]` : Exactly one character taken from the list.
+
+`[A-Z]` : Can also be defined by a range of characters.
+
+`[^0-9]` : Any (one) character not in the list.
+
+You can also query all objects in a specified radius of your target.
 
 ```{figure} _images/SIMBAD_ID.png
 ---
@@ -47,9 +60,11 @@ SIMBAD Object ID Query
 
 ## Query by coordinates
 
-You can query SIMBAD by coordinates and a search radius.
+You can query SIMBAD by coordinates and a search radius. You can search a single
+coordinate or a list of coordinates from a text file with one coordinate per
+line. For large queries the CDS X-match service is faster.
 
-**The following formats are allowed:**
+**The following coordinate formats are allowed:**
 
 HMS DMS
 : 16 41 41.6 +36 27 40.7  
@@ -65,9 +80,6 @@ DH DD
 DD DD
 : 250.42347 +36.461319
 
-You can search a single coordinate or a list of coordinates from a text file
-with one coordinate per line. For large queries the CDS X-match service is
-faster.
 
 ```{figure} _images/SIMBAD_coord.png
 ---
@@ -87,28 +99,26 @@ page.
 | -------- | ------------------------------------------ | ------------------------- |
 | =        | equality                                   | otype = '*'               |
 | !=       | not equal                                  | otype != 'galaxy'         |
-| <        | less than                                  | ubv.v < 5.5               |
+| <        | less than                                  | Bmag < 8.5                |
 | <=       | less than or equal                         | sptype <= 'G5'            |
 | >        | greater than                               | pm > 10                   |
 | >=       | greater than or equal                      | redshift >= 1.0           |
-| ∼        | contains the wildcard expression           | author ∼ 'egret*'         |
-| !∼       | does not contain the wildcard expression   |                           |
-| in       | contains at least one value among the list | cat in ('hd','hip','ppm') |
-| &        | and                                        | otype = '*'               |
-| \|       | or                                         | otype = '*'               |
+| ∼        | contains the wildcard expression           | author ∼ 'barnard*'       |
+| !∼       | does not contain the wildcard expression   | author !∼ 'barnard*'      |
+| in       | contains at least one value among the list | cat in ('hd','hr','sao')  |
+| &        | and                                        | dec > 40d & dec < 80d     |
+| \|       | or                                         | otype = 'C*' | otype = S* |
 
  You can also query by region or a defined shape; `circle`, `ellipse`, `zone`, `box`, `rotatedbox`, `polygon`.
  
  Examples:
 
-- `dec > 85 & (cat = 'hip' | cat = 'ppm') & radvel > 10`
-  Get all objects having a declination over 85 deg, a radial velocity over 10
-  km/sec and being in either the hipparcos or the ppm catalog.
+- `dec > 85 & cat in ('hd', 'hr', 'sao') & otypes= V*`
+  Get all variable stars having a declination over 85 deg, and in either the Henry Draper,
+  Yale Bright Star or SAO catalogs.
 
-- `region(GAL,180 0,2d) & otype = 'G' & (nbref >= 10|bibyear >= 2000)`
-  Find all galaxies in a 2 deg radius circle around the anti galactic center and
-  having not less than 10 bibliographic references or references earlier then
-  2000.
+- `region(circle, 'M81', 2d) & otype = 'G' & (Bmag < 14 | Vmag < 14 | Rmag < 14)`
+  Find all galaxies in a 2 deg radius circle around Messier 81 and B, V, or R mag less than 14.
 
 See the [SIMBAD users guide](http://simbad.cds.unistra.fr/guide/sim-fsam.htx) for additional information.
 
@@ -126,7 +136,8 @@ SIMBAD Object Criteria Query
 The Table Access Protocol (TAP) is an access protocol used across many sites to
 access astronomical data. TAP queries are written in the Astronomical Data Query
 Language (ADQL) which is a superset of SQL. Those who have some experience with
-SQL should find it familiar others will most likely not.
+SQL should find it familiar others would most likely prefer alternate interfaces
+such as astroquery.
 
 See the [SIMBAD ADQL guide](http://simbad.cds.unistra.fr/simbad/tap/help/adqlHelp.html)
 for more information.
@@ -140,6 +151,16 @@ SIMBAD TAP Query
 ```
 
 ## Query results
+
+The information returned by a SIMBAD query includes:
+
+- Basic data (coords, magnitudes, pm, parallax, etc.)
+- An Aladin thumbnail of the region around the target
+- Linked objects, children and parents
+- A list of identifiers
+- List of bibliographic references
+- List of measurements (pm, plx, distances, etc.)
+- Links to external archives and to the catalogues in VizieR
 
 ```{figure} _images/SIMBAD_1.png
 ---
