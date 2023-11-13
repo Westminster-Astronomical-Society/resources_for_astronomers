@@ -172,7 +172,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="CDS.html">Centre de Données Astronomiques de Strasbourg</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="CDS_portal.html">The CDS Portal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_SIMBAD.html">CDS SIMBAD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CDS_Aladin.html">CDS Aladin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_Vizier.html">CDS Vizier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_X-match.html">CDS X-match</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Interoperability and APIs</a></li>
@@ -408,8 +407,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samp">SAMP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cds-aladin">CDS Aladin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topcat">TOPCAT</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aladin">Aladin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carte-du-ciel">Carte du Ciel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-viewers">Image viewers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online-sky-atlases">Online sky atlases</a></li>
@@ -436,15 +435,25 @@ astronomy.</p>
 that means you can send that image or table to any SAMP client. You must have a
 SAMP hub running on your computer and one or more SAMP clients.</p>
 <figure class="align-default" id="cds-samp">
-<a class="reference internal image-reference" href="_images/SAMP_1.png"><img alt="_images/SAMP_1.png" src="_images/SAMP_1.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/SAMP_1.png"><img alt="_images/SAMP_1.png" src="_images/SAMP_1.png" style="width: 90%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">SAMP enabled CDS</span><a class="headerlink" href="#cds-samp" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">SAMP enabled CDS</span><a class="headerlink" href="#cds-samp" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The software listed below are SAMP enabled. TOPCAT and Aladin are both hubs and
 clients the others are clients only. There is also a standalone SAMP hub that
 comes with <a class="reference external" href="https://docs.astropy.org/en/stable/samp/">Astropy</a> that can be
 started from the commandline with the command <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">samp_hub</span></code>.</p>
+</section>
+<section id="cds-aladin">
+<h2>CDS Aladin<a class="headerlink" href="#cds-aladin" title="Permalink to this heading">#</a></h2>
+<p>Aladin is well integrated with CDS and is SAMP enabled, obviously.</p>
+<figure class="align-default" id="aladin-sky-atlas">
+<a class="reference internal image-reference" href="_images/aladin_1.png"><img alt="_images/aladin_1.png" src="_images/aladin_1.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Aladin Sky Atlas</span><a class="headerlink" href="#aladin-sky-atlas" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="topcat">
 <h2>TOPCAT<a class="headerlink" href="#topcat" title="Permalink to this heading">#</a></h2>
@@ -455,19 +464,9 @@ can also query CDS and many other data repositories directly. It can filter,
 compute statistics and plot information in astronomical data tables.</p>
 <p>For additional information see the <a class="reference external" href="https://www.star.bris.ac.uk/~mbt/topcat/sun253/index.html">TOPCAT help pages</a>.</p>
 <figure class="align-default" id="topcat-table-editor">
-<a class="reference internal image-reference" href="_images/topcat_1.png"><img alt="_images/topcat_1.png" src="_images/topcat_1.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/topcat_1.png"><img alt="_images/topcat_1.png" src="_images/topcat_1.png" style="width: 90%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">TOPCAT table editor</span><a class="headerlink" href="#topcat-table-editor" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="aladin">
-<h2>Aladin<a class="headerlink" href="#aladin" title="Permalink to this heading">#</a></h2>
-<p>Aladin is well integrated with CDS and is SAMP enabled, obviously.</p>
-<figure class="align-default" id="aladin-sky-atlas">
-<a class="reference internal image-reference" href="_images/aladin_1.png"><img alt="_images/aladin_1.png" src="_images/aladin_1.png" style="width: 80%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Aladin Sky Atlas</span><a class="headerlink" href="#aladin-sky-atlas" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">TOPCAT table editor</span><a class="headerlink" href="#topcat-table-editor" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -481,9 +480,33 @@ object name or coordinates from the object properties menu.</p>
 <p>For additional information see the
 <a class="reference external" href="https://www.ap-i.net/skychart/en/documentation/start">Cartes du Ciel documentation</a>.</p>
 <figure class="align-default" id="cartes-du-ciel">
-<a class="reference internal image-reference" href="_images/Cartes_du_Ciel_1.png"><img alt="_images/Cartes_du_Ciel_1.png" src="_images/Cartes_du_Ciel_1.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/cdc_details.png"><img alt="_images/cdc_details.png" src="_images/cdc_details.png" style="width: 90%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Carte du Ciel &amp; CDS</span><a class="headerlink" href="#cartes-du-ciel" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Carte du Ciel &amp; CDS</span><a class="headerlink" href="#cartes-du-ciel" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cartes-du-ciel-vo-1">
+<a class="reference internal image-reference" href="_images/cdc_vo_1.png"><img alt="_images/cdc_vo_1.png" src="_images/cdc_vo_1.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Virtual Observatory Catalog</span><a class="headerlink" href="#cartes-du-ciel-vo-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cartes-du-ciel-vo-2">
+<a class="reference internal image-reference" href="_images/cdc_vo_2.png"><img alt="_images/cdc_vo_2.png" src="_images/cdc_vo_2.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Virtual Observatory Catalog</span><a class="headerlink" href="#cartes-du-ciel-vo-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cartes-du-ciel-vo-3">
+<a class="reference internal image-reference" href="_images/cdc_vo_3.png"><img alt="_images/cdc_vo_3.png" src="_images/cdc_vo_3.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Virtual Observatory Catalog</span><a class="headerlink" href="#cartes-du-ciel-vo-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cartes-du-ciel-samp">
+<a class="reference internal image-reference" href="_images/cdc_samp.png"><img alt="_images/cdc_samp.png" src="_images/cdc_samp.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Carte du Ciel SAMP client</span><a class="headerlink" href="#cartes-du-ciel-samp" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -494,9 +517,9 @@ can display astronomical images in the FITS format. It is a SAMP enabled client
 and can send, receive, and display images and data from other SAMP clients. It
 can also query many astronomical databases directly.</p>
 <figure class="align-default" id="ds9-image-viewer">
-<a class="reference internal image-reference" href="_images/ds9_1.png"><img alt="_images/ds9_1.png" src="_images/ds9_1.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/ds9_1.png"><img alt="_images/ds9_1.png" src="_images/ds9_1.png" style="width: 90%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">ds9 image viewer</span><a class="headerlink" href="#ds9-image-viewer" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">ds9 image viewer</span><a class="headerlink" href="#ds9-image-viewer" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -574,8 +597,8 @@ can also query many astronomical databases directly.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samp">SAMP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cds-aladin">CDS Aladin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topcat">TOPCAT</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aladin">Aladin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carte-du-ciel">Carte du Ciel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-viewers">Image viewers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online-sky-atlases">Online sky atlases</a></li>

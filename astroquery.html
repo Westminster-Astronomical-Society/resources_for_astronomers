@@ -172,7 +172,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="CDS.html">Centre de Données Astronomiques de Strasbourg</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="CDS_portal.html">The CDS Portal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_SIMBAD.html">CDS SIMBAD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CDS_Aladin.html">CDS Aladin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_Vizier.html">CDS Vizier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_X-match.html">CDS X-match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_interop.html">Interoperability and APIs</a></li>
@@ -427,11 +426,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-   <picture>
- <source media="(prefers-color-scheme: dark)" srcset="_images/astroquery_project_logo_dark.svg">
- <source media="(prefers-color-scheme: light)" srcset="_images/astroquery_project_logo.svg">
- <img  class= "dark-light" alt="" style="float:right;height:50px;padding-right:20px;">
-</picture><section class="tex2jax_ignore mathjax_ignore" id="astroquery-examples">
+  <img src="_images/astroquery_project_logo_dark.svg" class= "dark-light" alt="" style="float:right;height:50px;padding-right:20px;"><section class="tex2jax_ignore mathjax_ignore" id="astroquery-examples">
 <h1>Astroquery Examples<a class="headerlink" href="#astroquery-examples" title="Permalink to this heading">#</a></h1>
 <p>Astroquery ( <a class="reference external" href="https://astroquery.readthedocs.io">https://astroquery.readthedocs.io</a> )
 is a set of tools for querying astronomical web forms and databases. It is a coordinated package
@@ -463,7 +458,7 @@ of the Astropy project ( <a class="reference external" href="http://www.astropy.
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><i>Table length=1</i>
-<table id="table139825494450080-789433" class="table-striped table-bordered table-condensed">
+<table id="table140179275621808-481878" class="table-striped table-bordered table-condensed">
 <thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
 <thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
 <tr><td>0</td><td>M  57</td><td>18 53 35.0967</td><td>+33 01 44.883</td></tr>
@@ -490,14 +485,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table139825494450080-789433').dataTable()");
+    console.log("$('#table140179275621808-481878').dataTable()");
     
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table139825494450080-789433').dataTable({
+    $('#table140179275621808-481878').dataTable({
         order: [],
         pageLength: 50,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -518,7 +513,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><i>Table length=34</i>
-<table id="table139825494352992-384905" class="table-striped table-bordered table-condensed">
+<table id="table140179275950448-413864" class="table-striped table-bordered table-condensed">
 <thead><tr><th>idx</th><th>ID</th></tr></thead>
 <tr><td>0</td><td>Gaia DR3 2090486618786534784</td></tr>
 <tr><td>1</td><td>PLX 4377</td></tr>
@@ -577,14 +572,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table139825494352992-384905').dataTable()");
+    console.log("$('#table140179275950448-413864').dataTable()");
     
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table139825494352992-384905').dataTable({
+    $('#table140179275950448-413864').dataTable({
         order: [],
         pageLength: 10,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -605,7 +600,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><i>Table length=4</i>
-<table id="table139825486320784-587270" class="table-striped table-bordered table-condensed">
+<table id="table140179221028432-633700" class="table-striped table-bordered table-condensed">
 <thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
 <thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
 <tr><td>0</td><td>M   1</td><td>05 34 30.9</td><td>+22 00 53</td></tr>
@@ -635,14 +630,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table139825486320784-587270').dataTable()");
+    console.log("$('#table140179221028432-633700').dataTable()");
     
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table139825486320784-587270').dataTable({
+    $('#table140179221028432-633700').dataTable({
         order: [],
         pageLength: 50,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -668,7 +663,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><i>Table length=9</i>
-<table id="table139825486322032-868581" class="table-striped table-bordered table-condensed">
+<table id="table140179220751408-204193" class="table-striped table-bordered table-condensed">
 <thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
 <thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
 <tr><td>0</td><td>M   1</td><td>05 34 30.9</td><td>+22 00 53</td></tr>
@@ -703,14 +698,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table139825486322032-868581').dataTable()");
+    console.log("$('#table140179220751408-204193').dataTable()");
     
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table139825486322032-868581').dataTable({
+    $('#table140179220751408-204193').dataTable({
         order: [],
         pageLength: 50,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -743,7 +738,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><i>Table length=10</i>
-<table id="table139825486107312-55654" class="table-striped table-bordered table-condensed">
+<table id="table140179220852496-929859" class="table-striped table-bordered table-condensed">
 <thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
 <thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
 <tr><td>0</td><td>M   1</td><td>05 34 30.9</td><td>+22 00 53</td></tr>
@@ -779,14 +774,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table139825486107312-55654').dataTable()");
+    console.log("$('#table140179220852496-929859').dataTable()");
     
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table139825486107312-55654').dataTable({
+    $('#table140179220852496-929859').dataTable({
         order: [],
         pageLength: 50,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -800,6 +795,9 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </section>
 <section id="query-by-region">
 <h3>Query by region<a class="headerlink" href="#query-by-region" title="Permalink to this heading">#</a></h3>
+<p>You can query all objects in a region with <code class="docutils literal notranslate"><span class="pre">query_region()</span></code>.
+Use a coordinate or object ID and a radius. When no radius is specified, the radius defaults to 20 arcmin.
+Coordinates should be an Astropy <code class="docutils literal notranslate"><span class="pre">SkyCoord()</span></code> object and the radius a Astropy <code class="docutils literal notranslate"><span class="pre">Quantity()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coord</span> <span class="o">=</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">SkyCoord</span><span class="p">(</span><span class="s2">&quot;18h53m35s +33d01m45s&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;icrs&#39;</span><span class="p">)</span>
@@ -812,7 +810,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><i>Table length=8</i>
-<table id="table139825485851904-913918" class="table-striped table-bordered table-condensed">
+<table id="table140179220624048-573799" class="table-striped table-bordered table-condensed">
 <thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
 <thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
 <tr><td>0</td><td>M  57</td><td>18 53 35.0967</td><td>+33 01 44.883</td></tr>
@@ -846,14 +844,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table139825485851904-913918').dataTable()");
+    console.log("$('#table140179220624048-573799').dataTable()");
     
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table139825485851904-913918').dataTable({
+    $('#table140179220624048-573799').dataTable({
         order: [],
         pageLength: 50,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -867,12 +865,230 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </section>
 <section id="query-by-catalog">
 <h3>Query by catalog<a class="headerlink" href="#query-by-catalog" title="Permalink to this heading">#</a></h3>
+<p>You can query all objects in a catalog with <code class="docutils literal notranslate"><span class="pre">query_catalog</span></code>.
+This can return a very large table so you should set a row limit on your query.
+When querying large catalogs query by criteria is better.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Simbad_</span> <span class="o">=</span> <span class="n">Simbad</span><span class="p">()</span>  <span class="c1"># define a new instance of the class</span>
+<span class="n">Simbad_</span><span class="o">.</span><span class="n">ROW_LIMIT</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># Set a row limit on that instance.</span>
+<span class="n">result_table</span> <span class="o">=</span> <span class="n">Simbad_</span><span class="o">.</span><span class="n">query_catalog</span><span class="p">(</span><span class="s1">&#39;ngc&#39;</span><span class="p">)</span>
+<span class="n">result_table</span><span class="p">[</span><span class="s1">&#39;MAIN_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;DEC&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">show_in_notebook</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><i>Table length=12</i>
+<table id="table140179220587472-910244" class="table-striped table-bordered table-condensed">
+<thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
+<thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
+<tr><td>0</td><td>NGC     1</td><td>00 07 15.8562</td><td>+27 42 29.020</td></tr>
+<tr><td>1</td><td>NGC     2</td><td>00 07 17.1156</td><td>+27 40 42.034</td></tr>
+<tr><td>2</td><td>NGC     3</td><td>00 07 16.7979</td><td>+08 18 05.976</td></tr>
+<tr><td>3</td><td>NGC     4</td><td>00 07 24.4</td><td>+08 22 30</td></tr>
+<tr><td>4</td><td>NGC     5</td><td>00 07 48.8659</td><td>+35 21 44.143</td></tr>
+<tr><td>5</td><td>NGC     7</td><td>00 08 20.96</td><td>-29 54 54.0</td></tr>
+<tr><td>6</td><td>NGC     8</td><td>00 08 45.3</td><td>+23 50 19</td></tr>
+<tr><td>7</td><td>NGC     9</td><td>00 08 54.6826</td><td>+23 49 00.823</td></tr>
+<tr><td>8</td><td>NGC    10</td><td>00 08 34.5389</td><td>-33 51 30.197</td></tr>
+<tr><td>9</td><td>NGC    11</td><td>00 08 42.494</td><td>+37 26 52.39</td></tr>
+<tr><td>10</td><td>NGC    12</td><td>00 08 44.7412</td><td>+04 36 45.267</td></tr>
+<tr><td>11</td><td>NGC    13</td><td>00 08 47.7150</td><td>+33 25 59.974</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140179220587472-910244').dataTable()");
+    
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140179220587472-910244').dataTable({
+        order: [],
+        pageLength: 50,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [0], type: "optionalnum"}]
+    });
+});
+</script>
+</div></div>
+</div>
 </section>
 <section id="query-by-criteria">
 <h3>Query by criteria<a class="headerlink" href="#query-by-criteria" title="Permalink to this heading">#</a></h3>
+<p>You can execute very specific queries using the <code class="docutils literal notranslate"><span class="pre">query_criteria()</span></code> method. These queries are formed in much the same way as they are on the web interface.
+Descriptions of <a class="reference external" href="https://simbad.cds.unistra.fr/simbad/sim-fsam">queryable fields</a> and <a class="reference external" href="https://simbad.cds.unistra.fr/guide/otypes.htx">object types</a>
+are on the SIMBAD website.</p>
+<p>Below is an example query for variable stars near the Trapezium.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_table</span> <span class="o">=</span> <span class="n">Simbad_</span><span class="o">.</span><span class="n">query_criteria</span><span class="p">(</span><span class="s1">&#39;region(CIRCLE, Trapezium, 6m)&#39;</span><span class="p">,</span> <span class="n">otype</span><span class="o">=</span><span class="s1">&#39;V*&#39;</span><span class="p">)</span>  <span class="c1"># Using row limited instance.</span>
+<span class="n">result_table</span><span class="p">[</span><span class="s1">&#39;MAIN_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;DEC&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">show_in_notebook</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><i>Table length=12</i>
+<table id="table140179220953216-822270" class="table-striped table-bordered table-condensed">
+<thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
+<thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
+<tr><td>0</td><td>V* KR Ori</td><td>05 35 00.1168</td><td>-05 23 01.884</td></tr>
+<tr><td>1</td><td>* tet01 Ori D</td><td>05 35 17.2574</td><td>-05 23 16.570</td></tr>
+<tr><td>2</td><td>* tet01 Ori E</td><td>05 35 15.7721</td><td>-05 23 09.889</td></tr>
+<tr><td>3</td><td>* tet01 Ori F</td><td>05 35 16.7270</td><td>-05 23 25.197</td></tr>
+<tr><td>4</td><td>* tet01 Ori A</td><td>05 35 15.8254</td><td>-05 23 14.334</td></tr>
+<tr><td>5</td><td>V* MR Ori</td><td>05 35 16.9783</td><td>-05 21 45.337</td></tr>
+<tr><td>6</td><td>V* AK Ori</td><td>05 35 26.3491</td><td>-05 25 40.220</td></tr>
+<tr><td>7</td><td>V* V420 Ori</td><td>05 35 28.2055</td><td>-05 24 58.186</td></tr>
+<tr><td>8</td><td>V* V404 Ori</td><td>05 35 03.0920</td><td>-05 22 37.827</td></tr>
+<tr><td>9</td><td>V* V377 Ori</td><td>05 35 21.2917</td><td>-05 24 57.399</td></tr>
+<tr><td>10</td><td>* tet02 Ori C</td><td>05 35 31.4311</td><td>-05 25 16.371</td></tr>
+<tr><td>11</td><td>V* LU Ori</td><td>05 35 11.4964</td><td>-05 26 02.389</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140179220953216-822270').dataTable()");
+    
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140179220953216-822270').dataTable({
+        order: [],
+        pageLength: 50,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [0], type: "optionalnum"}]
+    });
+});
+</script>
+</div></div>
+</div>
 </section>
 <section id="query-a-bibcode">
 <h3>Query a bibcode<a class="headerlink" href="#query-a-bibcode" title="Permalink to this heading">#</a></h3>
+<p>You can retrieve the references for a bibcode with <code class="docutils literal notranslate"><span class="pre">query_bibcode()</span></code>.</p>
+<p>example: <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1910ApJ....32...26R/abstract">Ritchey, G.W.</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bibliography</span> <span class="o">=</span> <span class="n">Simbad</span><span class="o">.</span><span class="n">query_bibcode</span><span class="p">(</span><span class="s1">&#39;1910ApJ....32...26R&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bibliography</span><span class="p">[</span><span class="s1">&#39;References&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1910ApJ....32...26R = DOI 10.1086/141784
+Astrophys. J., 32, 26-35 (1910)
+RITCHEY G.W.
+On some methods and results in direct photography with the 60-inch reflecting telescope of the Mount Wilson Solar Observatory.
+</pre></div>
+</div>
+</div>
+</div>
+<p>And get the objects referenced in the publication with <code class="docutils literal notranslate"><span class="pre">query_bibobj()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_table</span> <span class="o">=</span> <span class="n">Simbad</span><span class="o">.</span><span class="n">query_bibobj</span><span class="p">(</span><span class="s1">&#39;1910ApJ....32...26R&#39;</span><span class="p">)</span>
+<span class="n">result_table</span><span class="p">[</span><span class="s1">&#39;MAIN_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;DEC&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">show_in_notebook</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><i>Table length=7</i>
+<table id="table140179220851776-963054" class="table-striped table-bordered table-condensed">
+<thead><tr><th>idx</th><th>MAIN_ID</th><th>RA</th><th>DEC</th></tr></thead>
+<thead><tr><th></th><th></th><th>&quot;h:m:s&quot;</th><th>&quot;d:m:s&quot;</th></tr></thead>
+<tr><td>0</td><td>M   1</td><td>05 34 30.9</td><td>+22 00 53</td></tr>
+<tr><td>1</td><td>M  81</td><td>09 55 33.1726</td><td>+69 03 55.062</td></tr>
+<tr><td>2</td><td>M  97</td><td>11 14 47.7122</td><td>+55 01 08.482</td></tr>
+<tr><td>3</td><td>MCG+09-19-014</td><td>11 14 58.373</td><td>+54 57 41.22</td></tr>
+<tr><td>4</td><td>M  51</td><td>13 29 52.698</td><td>+47 11 42.93</td></tr>
+<tr><td>5</td><td>NGC  5195</td><td>13 29 59.590</td><td>+47 15 58.06</td></tr>
+<tr><td>6</td><td>M  57</td><td>18 53 35.0967</td><td>+33 01 44.883</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140179220851776-963054').dataTable()");
+    
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140179220851776-963054').dataTable({
+        order: [],
+        pageLength: 50,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [0], type: "optionalnum"}]
+    });
+});
+</script>
+</div></div>
+</div>
 </section>
 </section>
 <section id="vizier-queries">

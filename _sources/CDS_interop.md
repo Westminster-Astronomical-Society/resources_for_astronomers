@@ -13,7 +13,7 @@ SAMP hub running on your computer and one or more SAMP clients.
 
 ```{figure} _images/SAMP_1.png
 ---
-width: 80%
+width: 90%
 name: cds_samp
 ---
 SAMP enabled CDS
@@ -23,6 +23,18 @@ The software listed below are SAMP enabled. TOPCAT and Aladin are both hubs and
 clients the others are clients only. There is also a standalone SAMP hub that
 comes with [Astropy](https://docs.astropy.org/en/stable/samp/) that can be
 started from the commandline with the command `$ samp_hub`.
+
+## CDS Aladin
+
+Aladin is well integrated with CDS and is SAMP enabled, obviously.
+
+```{figure} _images/aladin_1.png
+---
+width: 90%
+name: aladin_sky_atlas
+---
+Aladin Sky Atlas
+```
 
 ## TOPCAT
 
@@ -36,22 +48,10 @@ For additional information see the [TOPCAT help pages](https://www.star.bris.ac.
 
 ```{figure} _images/topcat_1.png
 ---
-width: 80%
+width: 90%
 name: topcat_table_editor
 ---
 TOPCAT table editor
-```
-
-## Aladin
-
-Aladin is well integrated with CDS and is SAMP enabled, obviously.
-
-```{figure} _images/aladin_1.png
----
-width: 80%
-name: aladin_sky_atlas
----
-Aladin Sky Atlas
 ```
 
 ## Carte du Ciel
@@ -65,14 +65,44 @@ object name or coordinates from the object properties menu.
 For additional information see the
 [Cartes du Ciel documentation](https://www.ap-i.net/skychart/en/documentation/start).
 
-
-
-```{figure} _images/Cartes_du_Ciel_1.png
+```{figure} _images/cdc_details.png
 ---
-width: 80%
+width: 90%
 name: Cartes_du_Ciel
 ---
 Carte du Ciel & CDS
+```
+
+```{figure} _images/cdc_vo_1.png
+---
+width: 90%
+name: Cartes_du_Ciel_VO_1
+---
+Virtual Observatory Catalog
+```
+
+```{figure} _images/cdc_vo_2.png
+---
+width: 90%
+name: Cartes_du_Ciel_VO_2
+---
+Virtual Observatory Catalog
+```
+
+```{figure} _images/cdc_vo_3.png
+---
+width: 90%
+name: Cartes_du_Ciel_VO_3
+---
+Virtual Observatory Catalog
+```
+
+```{figure} _images/cdc_samp.png
+---
+width: 90%
+name: Cartes_du_Ciel_samp
+---
+Carte du Ciel SAMP client
 ```
 
 ## Image viewers
@@ -84,7 +114,7 @@ can also query many astronomical databases directly.
 
 ```{figure} _images/ds9_1.png
 ---
-width: 80%
+width: 90%
 name: ds9_image_viewer
 ---
 ds9 image viewer

@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'CDS_SIMBAD';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CDS Aladin" href="CDS_Aladin.html" />
+    <link rel="next" title="CDS Vizier" href="CDS_Vizier.html" />
     <link rel="prev" title="The CDS Portal" href="CDS_portal.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,7 +172,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="CDS.html">Centre de Données Astronomiques de Strasbourg</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="CDS_portal.html">The CDS Portal</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">CDS SIMBAD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CDS_Aladin.html">CDS Aladin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_Vizier.html">CDS Vizier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_X-match.html">CDS X-match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CDS_interop.html">Interoperability and APIs</a></li>
@@ -450,8 +449,14 @@ accessed through third party applications (Cartes du Ciel, Astroquery, etc.)</p>
 </figure>
 <section id="query-by-object-id">
 <h2>Query by object ID<a class="headerlink" href="#query-by-object-id" title="Permalink to this heading">#</a></h2>
-<p>You can query a single object ID, several objects using wildcards or a list. You can
-also query all objects in a specified radius of your target.</p>
+<p>You can query a single object ID, or several objects in a text file containing one item per line.</p>
+<p>Wildcards and ranges can be used in identifiers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">*</span></code> : Any string of characters (including an empty one)</p>
+<p><code class="docutils literal notranslate"><span class="pre">?</span></code> : Any character (exactly one character)</p>
+<p><code class="docutils literal notranslate"><span class="pre">[abc]</span></code> : Exactly one character taken from the list.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[A-Z]</span></code> : Can also be defined by a range of characters.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[^0-9]</span></code> : Any (one) character not in the list.</p>
+<p>You can also query all objects in a specified radius of your target.</p>
 <figure class="align-default" id="simbad-id">
 <a class="reference internal image-reference" href="_images/SIMBAD_ID.png"><img alt="_images/SIMBAD_ID.png" src="_images/SIMBAD_ID.png" style="width: 90%;" /></a>
 <figcaption>
@@ -461,8 +466,10 @@ also query all objects in a specified radius of your target.</p>
 </section>
 <section id="query-by-coordinates">
 <h2>Query by coordinates<a class="headerlink" href="#query-by-coordinates" title="Permalink to this heading">#</a></h2>
-<p>You can query SIMBAD by coordinates and a search radius.</p>
-<p><strong>The following formats are allowed:</strong></p>
+<p>You can query SIMBAD by coordinates and a search radius. You can search a single
+coordinate or a list of coordinates from a text file with one coordinate per
+line. For large queries the CDS X-match service is faster.</p>
+<p><strong>The following coordinate formats are allowed:</strong></p>
 <dl class="simple myst">
 <dt>HMS DMS</dt><dd><p>16 41 41.6 +36 27 40.7<br />
 16:41:41.6 +36:27:40.7<br />
@@ -475,9 +482,6 @@ also query all objects in a specified radius of your target.</p>
 <dt>DD DD</dt><dd><p>250.42347 +36.461319</p>
 </dd>
 </dl>
-<p>You can search a single coordinate or a list of coordinates from a text file
-with one coordinate per line. For large queries the CDS X-match service is
-faster.</p>
 <figure class="align-default" id="simbad-coord">
 <a class="reference internal image-reference" href="_images/SIMBAD_coord.png"><img alt="_images/SIMBAD_coord.png" src="_images/SIMBAD_coord.png" style="width: 90%;" /></a>
 <figcaption>
@@ -508,7 +512,7 @@ page.</p>
 </tr>
 <tr class="row-even"><td><p>&lt;</p></td>
 <td><p>less than</p></td>
-<td><p>ubv.v &lt; 5.5</p></td>
+<td><p>Bmag &lt; 8.5</p></td>
 </tr>
 <tr class="row-odd"><td><p>&lt;=</p></td>
 <td><p>less than or equal</p></td>
@@ -524,36 +528,34 @@ page.</p>
 </tr>
 <tr class="row-even"><td><p>∼</p></td>
 <td><p>contains the wildcard expression</p></td>
-<td><p>author ∼ ‘egret*’</p></td>
+<td><p>author ∼ ‘barnard*’</p></td>
 </tr>
 <tr class="row-odd"><td><p>!∼</p></td>
 <td><p>does not contain the wildcard expression</p></td>
-<td><p></p></td>
+<td><p>author !∼ ‘barnard*’</p></td>
 </tr>
 <tr class="row-even"><td><p>in</p></td>
 <td><p>contains at least one value among the list</p></td>
-<td><p>cat in (‘hd’,’hip’,’ppm’)</p></td>
+<td><p>cat in (‘hd’,’hr’,’sao’)</p></td>
 </tr>
 <tr class="row-odd"><td><p>&amp;</p></td>
 <td><p>and</p></td>
-<td><p>otype = ‘*’</p></td>
+<td><p>dec &gt; 40d &amp; dec &lt; 80d</p></td>
 </tr>
 <tr class="row-even"><td><p>|</p></td>
 <td><p>or</p></td>
-<td><p>otype = ‘*’</p></td>
+<td><p>otype = ‘C*’</p></td>
 </tr>
 </tbody>
 </table>
 <p>You can also query by region or a defined shape; <code class="docutils literal notranslate"><span class="pre">circle</span></code>, <code class="docutils literal notranslate"><span class="pre">ellipse</span></code>, <code class="docutils literal notranslate"><span class="pre">zone</span></code>, <code class="docutils literal notranslate"><span class="pre">box</span></code>, <code class="docutils literal notranslate"><span class="pre">rotatedbox</span></code>, <code class="docutils literal notranslate"><span class="pre">polygon</span></code>.</p>
 <p>Examples:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dec</span> <span class="pre">&gt;</span> <span class="pre">85</span> <span class="pre">&amp;</span> <span class="pre">(cat</span> <span class="pre">=</span> <span class="pre">'hip'</span> <span class="pre">|</span> <span class="pre">cat</span> <span class="pre">=</span> <span class="pre">'ppm')</span> <span class="pre">&amp;</span> <span class="pre">radvel</span> <span class="pre">&gt;</span> <span class="pre">10</span></code>
-Get all objects having a declination over 85 deg, a radial velocity over 10
-km/sec and being in either the hipparcos or the ppm catalog.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region(GAL,180</span> <span class="pre">0,2d)</span> <span class="pre">&amp;</span> <span class="pre">otype</span> <span class="pre">=</span> <span class="pre">'G'</span> <span class="pre">&amp;</span> <span class="pre">(nbref</span> <span class="pre">&gt;=</span> <span class="pre">10|bibyear</span> <span class="pre">&gt;=</span> <span class="pre">2000)</span></code>
-Find all galaxies in a 2 deg radius circle around the anti galactic center and
-having not less than 10 bibliographic references or references earlier then
-2000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dec</span> <span class="pre">&gt;</span> <span class="pre">85</span> <span class="pre">&amp;</span> <span class="pre">cat</span> <span class="pre">in</span> <span class="pre">('hd',</span> <span class="pre">'hr',</span> <span class="pre">'sao')</span> <span class="pre">&amp;</span> <span class="pre">otypes=</span> <span class="pre">V*</span></code>
+Get all variable stars having a declination over 85 deg, and in either the Henry Draper,
+Yale Bright Star or SAO catalogs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region(circle,</span> <span class="pre">'M81',</span> <span class="pre">2d)</span> <span class="pre">&amp;</span> <span class="pre">otype</span> <span class="pre">=</span> <span class="pre">'G'</span> <span class="pre">&amp;</span> <span class="pre">(Bmag</span> <span class="pre">&lt;</span> <span class="pre">14</span> <span class="pre">|</span> <span class="pre">Vmag</span> <span class="pre">&lt;</span> <span class="pre">14</span> <span class="pre">|</span> <span class="pre">Rmag</span> <span class="pre">&lt;</span> <span class="pre">14)</span></code>
+Find all galaxies in a 2 deg radius circle around Messier 81 and B, V, or R mag less than 14.</p></li>
 </ul>
 <p>See the <a class="reference external" href="http://simbad.cds.unistra.fr/guide/sim-fsam.htx">SIMBAD users guide</a> for additional information.</p>
 <figure class="align-default" id="simbad-criteria">
@@ -568,7 +570,8 @@ having not less than 10 bibliographic references or references earlier then
 <p>The Table Access Protocol (TAP) is an access protocol used across many sites to
 access astronomical data. TAP queries are written in the Astronomical Data Query
 Language (ADQL) which is a superset of SQL. Those who have some experience with
-SQL should find it familiar others will most likely not.</p>
+SQL should find it familiar others would most likely prefer alternate interfaces
+such as astroquery.</p>
 <p>See the <a class="reference external" href="http://simbad.cds.unistra.fr/simbad/tap/help/adqlHelp.html">SIMBAD ADQL guide</a>
 for more information.</p>
 <figure class="align-default" id="simbad-tap">
@@ -580,6 +583,16 @@ for more information.</p>
 </section>
 <section id="query-results">
 <h2>Query results<a class="headerlink" href="#query-results" title="Permalink to this heading">#</a></h2>
+<p>The information returned by a SIMBAD query includes:</p>
+<ul class="simple">
+<li><p>Basic data (coords, magnitudes, pm, parallax, etc.)</p></li>
+<li><p>An Aladin thumbnail of the region around the target</p></li>
+<li><p>Linked objects, children and parents</p></li>
+<li><p>A list of identifiers</p></li>
+<li><p>List of bibliographic references</p></li>
+<li><p>List of measurements (pm, plx, distances, etc.)</p></li>
+<li><p>Links to external archives and to the catalogues in VizieR</p></li>
+</ul>
 <figure class="align-default" id="simbad-results">
 <a class="reference internal image-reference" href="_images/SIMBAD_1.png"><img alt="_images/SIMBAD_1.png" src="_images/SIMBAD_1.png" style="width: 90%;" /></a>
 <figcaption>
@@ -629,11 +642,11 @@ for more information.</p>
       </div>
     </a>
     <a class="right-next"
-       href="CDS_Aladin.html"
+       href="CDS_Vizier.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CDS Aladin</p>
+        <p class="prev-next-title">CDS Vizier</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
