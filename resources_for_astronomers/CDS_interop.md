@@ -24,6 +24,18 @@ clients the others are clients only. There is also a standalone SAMP hub that
 comes with [Astropy](https://docs.astropy.org/en/stable/samp/) that can be
 started from the commandline with the command `$ samp_hub`.
 
+## CDS Aladin
+
+Aladin is well integrated with CDS and is SAMP enabled, obviously.
+
+```{figure} _images/aladin_1.png
+---
+width: 80%
+name: aladin_sky_atlas
+---
+Aladin Sky Atlas
+```
+
 ## TOPCAT
 
 Tool for OPerations on Catalogues And Tables (TOPCAT) is an interactive
