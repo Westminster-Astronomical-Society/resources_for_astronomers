@@ -13,7 +13,7 @@ SAMP hub running on your computer and one or more SAMP clients.
 
 ```{figure} _images/SAMP_1.png
 ---
-width: 80%
+width: 90%
 name: cds_samp
 ---
 SAMP enabled CDS
@@ -30,7 +30,7 @@ Aladin is well integrated with CDS and is SAMP enabled, obviously.
 
 ```{figure} _images/aladin_1.png
 ---
-width: 80%
+width: 90%
 name: aladin_sky_atlas
 ---
 Aladin Sky Atlas
@@ -48,7 +48,7 @@ For additional information see the [TOPCAT help pages](https://www.star.bris.ac.
 
 ```{figure} _images/topcat_1.png
 ---
-width: 80%
+width: 90%
 name: topcat_table_editor
 ---
 TOPCAT table editor
@@ -67,7 +67,7 @@ For additional information see the
 
 ```{figure} _images/cdc_details.png
 ---
-width: 80%
+width: 90%
 name: Cartes_du_Ciel
 ---
 Carte du Ciel & CDS
@@ -75,7 +75,7 @@ Carte du Ciel & CDS
 
 ```{figure} _images/cdc_vo_1.png
 ---
-width: 80%
+width: 90%
 name: Cartes_du_Ciel_VO_1
 ---
 Virtual Observatory Catalog
@@ -83,7 +83,7 @@ Virtual Observatory Catalog
 
 ```{figure} _images/cdc_vo_2.png
 ---
-width: 80%
+width: 90%
 name: Cartes_du_Ciel_VO_2
 ---
 Virtual Observatory Catalog
@@ -91,7 +91,7 @@ Virtual Observatory Catalog
 
 ```{figure} _images/cdc_vo_3.png
 ---
-width: 80%
+width: 90%
 name: Cartes_du_Ciel_VO_3
 ---
 Virtual Observatory Catalog
@@ -99,7 +99,7 @@ Virtual Observatory Catalog
 
 ```{figure} _images/cdc_samp.png
 ---
-width: 80%
+width: 90%
 name: Cartes_du_Ciel_samp
 ---
 Carte du Ciel SAMP client
@@ -114,7 +114,7 @@ can also query many astronomical databases directly.
 
 ```{figure} _images/ds9_1.png
 ---
-width: 80%
+width: 90%
 name: ds9_image_viewer
 ---
 ds9 image viewer
