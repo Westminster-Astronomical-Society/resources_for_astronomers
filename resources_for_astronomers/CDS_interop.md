@@ -42,18 +42,6 @@ name: topcat_table_editor
 TOPCAT table editor
 ```
 
-## Aladin
-
-Aladin is well integrated with CDS and is SAMP enabled, obviously.
-
-```{figure} _images/aladin_1.png
----
-width: 80%
-name: aladin_sky_atlas
----
-Aladin Sky Atlas
-```
-
 ## Carte du Ciel
 
 Cartes du Ciel is a free and opensource skychart program that is very useful in
@@ -65,14 +53,44 @@ object name or coordinates from the object properties menu.
 For additional information see the
 [Cartes du Ciel documentation](https://www.ap-i.net/skychart/en/documentation/start).
 
-
-
-```{figure} _images/Cartes_du_Ciel_1.png
+```{figure} _images/cdc_details.png
 ---
 width: 80%
 name: Cartes_du_Ciel
 ---
 Carte du Ciel & CDS
+```
+
+```{figure} _images/cdc_vo_1.png
+---
+width: 80%
+name: Cartes_du_Ciel_VO_1
+---
+Virtual Observatory Catalog
+```
+
+```{figure} _images/cdc_vo_2.png
+---
+width: 80%
+name: Cartes_du_Ciel_VO_2
+---
+Virtual Observatory Catalog
+```
+
+```{figure} _images/cdc_vo_3.png
+---
+width: 80%
+name: Cartes_du_Ciel_VO_3
+---
+Virtual Observatory Catalog
+```
+
+```{figure} _images/cdc_samp.png
+---
+width: 80%
+name: Cartes_du_Ciel_samp
+---
+Carte du Ciel SAMP client
 ```
 
 ## Image viewers
