@@ -23,7 +23,6 @@ accessed through third party applications (Cartes du Ciel, Astroquery, etc.)
 
 The [SIMBAD users guide](http://simbad.cds.unistra.fr/guide/index.htx) has additional information.
 
-
 ```{figure} _images/SIMBAD.png
 ---
 width: 90%
@@ -80,7 +79,6 @@ DH DD
 DD DD
 : 250.42347 +36.461319
 
-
 ```{figure} _images/SIMBAD_coord.png
 ---
 width: 90%
@@ -92,7 +90,7 @@ SIMBAD Object Coordinates Query
 ## Query by criteria
 
 You can SIMBAD for various criteria and constraints using boolean operators.
-Queriable criteria and allowed operators are listed on the query by criteria
+Queryable criteria and allowed operators are listed on the query by criteria
 page.
 
 | operator | description                                | example                   |
@@ -110,7 +108,7 @@ page.
 | \|       | or                                         | otype = 'C*' | otype = S* |
 
  You can also query by region or a defined shape; `circle`, `ellipse`, `zone`, `box`, `rotatedbox`, `polygon`.
- 
+
  Examples:
 
 - `dec > 85 & cat in ('hd', 'hr', 'sao') & otypes= V*`
@@ -121,7 +119,6 @@ page.
   Find all galaxies in a 2 deg radius circle around Messier 81 and B, V, or R mag less than 14.
 
 See the [SIMBAD users guide](http://simbad.cds.unistra.fr/guide/sim-fsam.htx) for additional information.
-
 
 ```{figure} _images/SIMBAD_criteria.png
 ---
