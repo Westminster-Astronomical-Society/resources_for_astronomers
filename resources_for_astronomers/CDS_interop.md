@@ -22,7 +22,7 @@ SAMP enabled CDS
 The software listed below are SAMP enabled. TOPCAT and Aladin are both hubs and
 clients the others are clients only. There is also a standalone SAMP hub that
 comes with [Astropy](https://docs.astropy.org/en/stable/samp/) that can be
-started from the commandline with the command `$ samp_hub`.
+started from the command line with the command `$ samp_hub`.
 
 ## CDS Aladin
 
