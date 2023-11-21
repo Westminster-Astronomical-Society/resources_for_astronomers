@@ -161,7 +161,7 @@ The information returned by a SIMBAD query includes:
 - A list of identifiers
 - List of bibliographic references
 - List of measurements (pm, plx, distances, etc.)
-- Links to external archives and to the catalogues in VizieR
+- Links to external archives and to the catalogs in VizieR
 
 ```{figure} _images/SIMBAD_1.png
 ---
