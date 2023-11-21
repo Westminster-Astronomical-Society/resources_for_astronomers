@@ -26,7 +26,7 @@ started from the command line with the command `$ samp_hub`.
 
 ## CDS Aladin
 
-Aladin ( [http://aladin.cds.unistra.fr/](http://aladin.cds.unistra.fr/) ) is an
+Aladin ( [http://aladin.cds.unistra.fr](http://aladin.cds.unistra.fr/) ) is an
 interactive sky atlas for visualizing astronomical images and interactively
 exploring astronomical catalogs and databases. The Aladin Sky Atlas comes in two
 versions, Aladin Desktop to run locally on your computer and Aladin Lite, a
@@ -54,7 +54,7 @@ Aladin Sky Atlas
 
 There is also a Jupyter Aladin Lite extension that will enable interactive sky
 visualization in Jupyter notebooks.
-See the [CDS/ipyaladin](https://github.com/cds-astro/ipyaladin) Github page for
+See the [CDS-astro / ipyaladin](https://github.com/cds-astro/ipyaladin) Github page for
 installation instructions and usage.
 
 ## TOPCAT
