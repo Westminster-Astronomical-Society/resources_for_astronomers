@@ -4,10 +4,10 @@ SIMBAD: **S**et of **I**dentifications, **M**easurements, and **B**ibliography f
 
 [http://simbad.cds.unistra.fr](http://simbad.cds.unistra.fr)
 
-SIMBAD is a dynamic database that provides basic information for many astronomical
+SIMBAD is a database that provides basic information for many astronomical
 objects such as name and identification, coordinates, magnitudes, proper motions
 and parallax, velocity/redshift, size, spectral or morphological type, and
-bibliographic information.
+bibliographic information. It is a dynamic resource that is updated daily.
 
 As of 2023-11-07 the SIMBAD data base contains:
 
@@ -15,11 +15,12 @@ As of 2023-11-07 the SIMBAD data base contains:
 - 61,325,632 identifiers
 - 426,969 bibliographic references
 
-The only astronomical objects specifically excluded from SIMBAD are Solar System bodies.
+SIMBAD does not contain information for Solar System bodies.
 
-You can query SIMBAD by object ID, coordinates, or by criteria (Ra, Dec, object
-type, magnitude, etc.). There is also a TAP interface and the database can be
-accessed through third party applications (Cartes du Ciel, Astroquery, etc.)
+You can query SIMBAD by object ID, coordinates in sexagesimal or decimal
+degrees, or by criteria (Ra, Dec, object type, magnitude, etc.). There is also a
+TAP (Table Access Protocol) interface and the database can be accessed through
+third party applications (Cartes du Ciel, Astroquery, etc.)
 
 The [SIMBAD users guide](http://simbad.cds.unistra.fr/guide/index.htx) has additional information.
 
@@ -39,15 +40,15 @@ Wildcards and ranges can be used in identifiers.
 
 `*` : Any string of characters (including an empty one)
 
-`?` : Any character (exactly one character)
+`?` : Any single character.
 
 `[abc]` : Exactly one character taken from the list.
 
-`[A-Z]` : Can also be defined by a range of characters.
+`[A-Z]` : One character from a range.
 
-`[^0-9]` : Any (one) character not in the list.
+`[^0-9]` : Any character not in the list.
 
-You can also query all objects in a specified radius of your target.
+You can also query all objects within a specified radius of your target.
 
 ```{figure} _images/SIMBAD_ID.png
 ---
@@ -78,6 +79,9 @@ DH DD
 
 DD DD
 : 250.42347 +36.461319
+
+In general sexagesimal coordinates are in HMS DMS  and decimal coordinates are
+in degrees unless a unit is specified.
 
 ```{figure} _images/SIMBAD_coord.png
 ---

@@ -195,7 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">End Matter</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Refrences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">References</a></li>
 </ul>
 
     </div>
@@ -426,20 +426,21 @@ document.write(`
 <h1>CDS SIMBAD<a class="headerlink" href="#cds-simbad" title="Permalink to this heading">#</a></h1>
 <p>SIMBAD: <strong>S</strong>et of <strong>I</strong>dentifications, <strong>M</strong>easurements, and <strong>B</strong>ibliography for <strong>A</strong>stronomical <strong>D</strong>ata.</p>
 <p><a class="reference external" href="http://simbad.cds.unistra.fr">http://simbad.cds.unistra.fr</a></p>
-<p>SIMBAD is a dynamic database that provides basic information for many astronomical
+<p>SIMBAD is a database that provides basic information for many astronomical
 objects such as name and identification, coordinates, magnitudes, proper motions
 and parallax, velocity/redshift, size, spectral or morphological type, and
-bibliographic information.</p>
+bibliographic information. It is a dynamic resource that is updated daily.</p>
 <p>As of 2023-11-07 the SIMBAD data base contains:</p>
 <ul class="simple">
 <li><p>16,943,427 objects</p></li>
 <li><p>61,325,632 identifiers</p></li>
 <li><p>426,969 bibliographic references</p></li>
 </ul>
-<p>The only astronomical objects specifically excluded from SIMBAD are Solar System bodies.</p>
-<p>You can query SIMBAD by object ID, coordinates, or by criteria (Ra, Dec, object
-type, magnitude, etc.). There is also a TAP interface and the database can be
-accessed through third party applications (Cartes du Ciel, Astroquery, etc.)</p>
+<p>SIMBAD does not contain information for Solar System bodies.</p>
+<p>You can query SIMBAD by object ID, coordinates in sexagesimal or decimal
+degrees, or by criteria (Ra, Dec, object type, magnitude, etc.). There is also a
+TAP (Table Access Protocol) interface and the database can be accessed through
+third party applications (Cartes du Ciel, Astroquery, etc.)</p>
 <p>The <a class="reference external" href="http://simbad.cds.unistra.fr/guide/index.htx">SIMBAD users guide</a> has additional information.</p>
 <figure class="align-default" id="simbad-main">
 <a class="reference internal image-reference" href="_images/SIMBAD.png"><img alt="_images/SIMBAD.png" src="_images/SIMBAD.png" style="width: 90%;" /></a>
@@ -452,11 +453,11 @@ accessed through third party applications (Cartes du Ciel, Astroquery, etc.)</p>
 <p>You can query a single object ID, or several objects in a text file containing one item per line.</p>
 <p>Wildcards and ranges can be used in identifiers.</p>
 <p><code class="docutils literal notranslate"><span class="pre">*</span></code> : Any string of characters (including an empty one)</p>
-<p><code class="docutils literal notranslate"><span class="pre">?</span></code> : Any character (exactly one character)</p>
+<p><code class="docutils literal notranslate"><span class="pre">?</span></code> : Any single character.</p>
 <p><code class="docutils literal notranslate"><span class="pre">[abc]</span></code> : Exactly one character taken from the list.</p>
-<p><code class="docutils literal notranslate"><span class="pre">[A-Z]</span></code> : Can also be defined by a range of characters.</p>
-<p><code class="docutils literal notranslate"><span class="pre">[^0-9]</span></code> : Any (one) character not in the list.</p>
-<p>You can also query all objects in a specified radius of your target.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[A-Z]</span></code> : One character from a range.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[^0-9]</span></code> : Any character not in the list.</p>
+<p>You can also query all objects within a specified radius of your target.</p>
 <figure class="align-default" id="simbad-id">
 <a class="reference internal image-reference" href="_images/SIMBAD_ID.png"><img alt="_images/SIMBAD_ID.png" src="_images/SIMBAD_ID.png" style="width: 90%;" /></a>
 <figcaption>
@@ -482,6 +483,8 @@ line. For large queries the CDS X-match service is faster.</p>
 <dt>DD DD</dt><dd><p>250.42347 +36.461319</p>
 </dd>
 </dl>
+<p>In general sexagesimal coordinates are in HMS DMS  and decimal coordinates are
+in degrees unless a unit is specified.</p>
 <figure class="align-default" id="simbad-coord">
 <a class="reference internal image-reference" href="_images/SIMBAD_coord.png"><img alt="_images/SIMBAD_coord.png" src="_images/SIMBAD_coord.png" style="width: 90%;" /></a>
 <figcaption>

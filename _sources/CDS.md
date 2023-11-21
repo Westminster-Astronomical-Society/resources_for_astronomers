@@ -5,7 +5,7 @@
 
 :::{grid-item}
 
-```{figure} _images/CDS-organisation.svg
+```{figure} _images/CDS-organization.svg
 :class: dark-light
 
 ---
