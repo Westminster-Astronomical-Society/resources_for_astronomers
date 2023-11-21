@@ -26,7 +26,23 @@ started from the command line with the command `$ samp_hub`.
 
 ## CDS Aladin
 
-Aladin is well integrated with CDS and is SAMP enabled, obviously.
+Aladin ( [http://aladin.cds.unistra.fr/](http://aladin.cds.unistra.fr/) ) is an
+interactive sky atlas for visualizing astronomical images and interactively
+exploring astronomical catalogs and databases. The Aladin Sky Atlas comes in two
+versions, Aladin Desktop to run locally on your computer and Aladin Lite, a
+Javascript web application.
+
+The Aladin Sky Atlas is well integrated with CDS and is SAMP enabled, obviously.
+You can display and explore astronomical images from a large number of sources
+in HiPS, FITS, and JPG or PNG formats, and overlay astronomical data from SIMBAD,
+VizieR, and numerous other data sources. You can search for object IDs or
+coordinates from the command bar or explore images and catalogs interactively
+from the collections data tree. You can exchange data and images with other
+applications (Carte du Ciel, DS9, TOPCAT, etc.) via SAMP. Clicking on the image
+in the field will send coordinates to Carte du Ciel and vice versa.
+
+See the Aladin [documentation](http://aladin.cds.unistra.fr/AladinDesktop/#Documentation)
+for more information.
 
 ```{figure} _images/aladin_1.png
 ---
@@ -35,6 +51,11 @@ name: aladin_sky_atlas
 ---
 Aladin Sky Atlas
 ```
+
+There is also a Jupyter Aladin Lite extension that will enable interactive sky
+visualization in Jupyter notebooks.
+See the [CDS/ipyaladin](https://github.com/cds-astro/ipyaladin) Github page for
+installation instructions and usage.
 
 ## TOPCAT
 
@@ -121,6 +142,8 @@ ds9 image viewer
 ```
 
 ## Online sky atlases
+
+There are several online sky atlases the are built on and utilize CDS data.
 
 - Aladin Lite [http://aladin.cds.unistra.fr/AladinLite](http://aladin.cds.unistra.fr/AladinLite)
 - ESA Sky [https://sky.esa.int/esasky](https://sky.esa.int/esasky)
