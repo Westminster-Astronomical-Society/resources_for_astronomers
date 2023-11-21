@@ -36,4 +36,5 @@ parts:
   - caption: End Matter
     numbered: False
     chapters:
+    - file: contributing
     - file: reference
