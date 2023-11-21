@@ -23,11 +23,11 @@ astronomical data and related information hosted at the University of Strasbourg
 
 - **SIMBAD:** Database for the identification of astronomical objects, measurements and bibliographic references.
 
-- **Vizier:** Reference collection of astronomical catalogues and tables.
+- **Vizier:** Reference collection of astronomical catalogs and tables.
 
-- **Aladin:** Interactive sky atlas for visualization and analysis of astronomical images, catalogues, and related data.
+- **Aladin:** Interactive sky atlas for visualization and analysis of astronomical images, catalogs, and related data.
 
-- **X-match:** Tool to efficiently cross-identify sources between very large catalogues.
+- **X-match:** Tool to efficiently cross-identify sources between very large catalogs.
 
 CDS data can be accessed through the web interface at [https://cds.unistra.fr](https://cds.unistra.fr),
 FTP, TAP interface, or through third party applications and APIs.
