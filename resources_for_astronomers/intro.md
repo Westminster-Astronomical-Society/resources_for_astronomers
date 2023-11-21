@@ -23,5 +23,8 @@ The enormous volume of information available can be somewhat overwhelming
 though. This guide is a general overview of what is available and how you can
 access it.
 
+This is a work in progress. **See the [](../contributing.md) page** for
+information on how to make contributions, suggestions, or corrections.
+
 ```{tableofcontents}
 ```
